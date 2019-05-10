@@ -1,0 +1,15 @@
+#container{
+    margin: 0 auto;
+    width: 900px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: greenyellow;
+}
+main{
+    margin-bottom: 50px;
+}
