@@ -1,0 +1,15 @@
+.my-flex-container{
+    background-color: #44b9ed;
+    color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.my-flex-block{
+    font: 25px "Times New Roman";
+    padding: 10px;
+}
+.my-flex-block:hover{
+    color: #44b9ed;
+    background-color: white;
+}

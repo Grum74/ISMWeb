@@ -1,0 +1,20 @@
+.my-flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-flex-block{
+    color: white;
+    background-color: orangered;
+    list-style: none;
+    font: 25px Arial;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin: 1px;
+}
+.my-flex-block:hover{
+    background-color: orange;
+}
