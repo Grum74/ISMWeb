@@ -1,0 +1,166 @@
+body{
+    font-family: Arial;
+    background-color: #9693ff;
+    background-color: #9693ff;
+}
+#container{
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 350px 350px 300px 250px;
+    grid-gap: 5px;
+    grid-template-areas:
+            "h h h h h h h h h h h h"
+            "im1 im1 im1 im1 im1 im2 im2 im2 im2 im2 a a"
+            "im3 im3 im3 im3 im3 im4 im4 im4 im4 im4 a a"
+            "ar1 ar1 ar1 ar1 ar2 ar2 ar2 ar2 ar3 ar3 ar3 ar3"
+            "f f f f f f f f f f f f";
+}
+h1::before{
+    content: "the_";
+}
+h1::after{
+    content: "_site";
+}
+header{
+    border-radius: 20px;
+    line-height: 50px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0px 0px rgba(255,255,255,1), 3px 3px red, -3px -2px rgba(200, 200, 200, .7);
+    background-color: blue;
+    grid-area: h;
+}
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img1{
+    position: relative;
+    grid-area: im1;
+    transform-origin: top left;
+}
+.img2{
+    position: relative;
+    grid-area: im2;
+    transform-origin: top right;
+}
+.img3{
+    position: relative;
+    grid-area: im3;
+    transform-origin: bottom left;
+}
+.img4{
+    position: relative;
+    grid-area: im4;
+    transform-origin: bottom right;
+}
+.img{
+    transition: .5s;
+}
+.img:hover{
+    z-index: 100;
+    transform: scale(2);
+}
+main{
+    grid-area: m;
+}
+footer{
+    grid-area: f;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+aside{
+    grid-area: a;
+    border-radius: 20px;
+    background-color: white;
+    color: orange;
+    box-shadow: inset 25px 25px 10px orange;
+    font-size: 35px;
+    writing-mode: tb-rl;
+    line-height: 200px;
+    text-align: center;
+}
+article{
+    padding: 10px;
+    overflow: auto;
+    border-radius: 20px;
+    background-color: white;
+}
+.ar1{
+    grid-area: ar1;
+}
+.ar2{
+    grid-area: ar2;
+}
+.ar3{
+    grid-area: ar3;
+}
+a{
+    text-decoration: none;
+    font: bold 18px Arial;
+    color: white;
+}
+a:hover{
+    color: red;
+}
+address{
+    margin-top: 20px;
+    font: normal 14px Arial;
+}
+footer p{
+    font: italic bold 14px Arial;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 40px;
+}
+.fixed{
+    overflow: hidden;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    position: fixed;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    left: 1555px;
+    top: 5px;
+    transition: .5s;
+}
+.fixed:hover{
+    left: 1405px;
+    width: 200px;
+}
+.fixed:hover::after{
+    content: " US ON TELEGRAM";
+}
+@media screen  and (max-width: 768px){
+    #container{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 350px 350px 100px 200px 200px 200px 100px;
+        grid-gap: 5px;
+        grid-template-areas:
+                "h h"
+                "im1 im2"
+                "im3 im4"
+                "a a"
+                "ar1 ar1"
+                "ar2 ar2"
+                "ar3 ar3"
+                "f f";
+    }
+    aside{
+        writing-mode: lr;
+        line-height: 100px;
+    }
+}
