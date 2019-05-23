@@ -3,11 +3,14 @@
     color: white;
     border: 2px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items:stretch;
 }
 .my-flex-block{
     font: 25px "Times New Roman";
     padding: 10px;
+    border: 2px solid black;
+    text-align: center;
 }
 .my-flex-block:hover{
     color: #44b9ed;

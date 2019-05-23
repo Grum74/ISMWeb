@@ -1,13 +1,16 @@
 .my-flex-container{
     background-color: #44b9ed;
     color: white;
-    border: 2px solid black;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    width: 500px;
 }
 .my-flex-block{
     font: 25px "Times New Roman";
     padding: 10px;
+    margin-bottom: -2px;
+    border: 2px solid black;
 }
 .my-flex-block:hover{
     color: #44b9ed;

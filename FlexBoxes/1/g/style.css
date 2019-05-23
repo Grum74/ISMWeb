@@ -3,8 +3,9 @@
     color: white;
     border: 2px solid black;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items:center;
+    flex-direction: row-reverse;
 }
 .my-flex-block{
     font: 25px "Times New Roman";

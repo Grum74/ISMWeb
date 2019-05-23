@@ -4,7 +4,7 @@
     border: 2px solid black;
     display: flex;
     justify-content: center;
-    align-items:stretch;
+    align-items:center;
 }
 .my-flex-block{
     font: 25px "Times New Roman";
