@@ -1,0 +1,35 @@
+#container{
+    margin: 0 auto;
+}
+ol{
+    list-style: none;
+    counter-reset: section;
+}
+ol div:before{
+    counter-increment: section;
+    content: counters(section, ".");
+}
+ol div{
+    width: 30px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #9693ff;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+    background-color: green;
+    color: yellow;
+    border: 2px solid yellow;
+}
+.yellow{
+    background-color: yellow;
+    color: blue;
+    border: 2px solid blue;
+}
+.in{
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+}

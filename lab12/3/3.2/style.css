@@ -1,0 +1,44 @@
+body{
+    counter-reset: section;
+}
+#container{
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.list{
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+}
+h1{
+    color: red;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    width: 500px;
+}
+.num{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.num:before{
+    counter-increment: section;
+    content: counter(section, decimal);
+}
+p{
+    display: inline-block;
+}
+li{
+    height: 45px;
+    border-bottom: 1px solid gainsboro;
+}
