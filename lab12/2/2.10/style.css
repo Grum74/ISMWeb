@@ -1,0 +1,19 @@
+#cube{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    animation: move 3s infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+#cube:hover{
+    animation-play-state: running;
+}
+@keyframes move {
+    0%{
+        width: 50px;
+    }
+    100%{
+        width: 1000px;
+    }
+}

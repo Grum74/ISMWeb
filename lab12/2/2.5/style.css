@@ -1,0 +1,32 @@
+#cube{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    animation: move 6s infinite, color 2s infinite;
+}
+@keyframes move {
+    0%, 100%{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    25%{
+        margin-top: 0;
+        margin-left: 30%;
+    }
+    50%{
+        margin-left: 30%;
+        margin-top: 30%;
+    }
+    75%{
+        margin-top: 30%;
+        margin-left: 0;
+    }
+}
+@keyframes color {
+    0%, 100%{
+        background-color: white;
+    }
+    50%{
+        background-color: red;
+    }
+}

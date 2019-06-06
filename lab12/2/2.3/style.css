@@ -1,0 +1,14 @@
+#cube{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    animation: color 3s infinite;
+}
+@keyframes color {
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: red;
+    }
+}
