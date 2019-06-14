@@ -1,0 +1,9 @@
+#task{
+    display: inline-block;
+}
+#res{
+    margin-top: 0;
+}
+.visibility{
+    display: none;
+}

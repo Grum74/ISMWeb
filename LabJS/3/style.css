@@ -1,0 +1,13 @@
+#task{
+    display: inline-block;
+}
+#res{
+    margin-top: 0;
+}
+.visibility{
+    display: none;
+}
+input{
+    display: block;
+    margin-bottom: 10px;
+}
