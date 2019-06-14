@@ -14,7 +14,7 @@ function taskGenerator() {
 
 function checkAnswer (answer) {
     var bool = false;
-    if(answElem.value == answer){
+    if(Checked == answer){
         resElem.textContent = "Відповідь правильна";
         bool = true;
     }
@@ -22,30 +22,79 @@ function checkAnswer (answer) {
         resElem.textContent = "Помилка, правильна відповідь " + answer;
     }
     return bool;
+    for(i = 0; i<radioElem.length; i++){
+        radioElem[i].disabled = true;
+    }
 }
 
-var answElem = document.querySelector("#answ");
+function answersGenerator(answer) {
+    var correct = randomInteger(1,radioElem.length);
+    for (var i = 0; i < radioElem.length; i++){
+        if (i==correct-1){
+            radioElem[i].value = answer;
+        }
+        else{
+            radioElem[i].value = randomInteger(1,20);
+        }
+        console.log(radioElem[i].value);
+    }
+    console.log("***********");
+    for (i = 0; i<radioElem.length; i++){
+        for(j=i+1; j<radioElem.length;j++){
+            if(radioElem[i].value == radioElem[j].value){
+                radioElem[j].value = 0;
+            }
+        }
+        answElem[i].textContent = radioElem[i].value;
+    }
+    for (i = 0; i<radioElem.length; i++){
+        console.log(radioElem[i].value);
+    }
+    console.log("correct"+correct);
+}
+
+function getCheckedValue() {
+    for (i = 0; i < radioElem.length; i++){
+        if(radioElem[i].checked){
+            return radioElem[i].value;
+        }
+    }
+}
+
+var answElem = document.querySelectorAll(".textAnsw");
 var resElem = document.querySelector("#res");
 var scoreElem = document.querySelector("#score");
 var taskElem = document.querySelector("#task");
 var checkButton = document.querySelector("#check");
 var nextButton = document.querySelector("#next");
+var radioElem = document.querySelectorAll(".radio");
+
 
 var Answer = taskGenerator();
+var Checked;
+answersGenerator(Answer);
 var bool = false;
 var n = 0;
 var amount = 10;
 var current = 1;
 
-checkButton.onclick = function(){
-    bool = checkAnswer(Answer);
+for (i=0;i<radioElem.length;i++) {
+    radioElem[i].onclick = function () {
+        Checked = getCheckedValue();
+        checkAnswer(Answer);
+    }
 }
+
 
 nextButton.onclick = function () {
     current++;
     Answer = taskGenerator();
+    answersGenerator(Answer);
     resElem.textContent = "";
-    answElem.value = "";
+    for(i = 0; i<radioElem.length; i++){
+        radioElem[i].checked = false;
+        radioElem[i].disabled = false;
+    }
     if (bool == true){
         n++;
     }

@@ -7,7 +7,7 @@
 .visibility{
     display: none;
 }
-input{
-    display: block;
-    margin-bottom: 10px;
+.textAnsw{
+    display: inline-block;
+    margin-left: 10px;
 }
